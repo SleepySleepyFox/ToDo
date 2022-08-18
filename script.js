@@ -7,7 +7,6 @@ let deleted = 0;
 let done = 0;
 let = def = 0;
 
-// mobile functions
 var onlongtouch; 
 var timer;
 var touchduration = 500;
@@ -37,14 +36,6 @@ let blockFunc = {
         
     },
 
-    storeData: function(){
-        // localStorage.setItem('parentElementID', this.parentId)
-        // localStorage.setItem('elementTAG', this.elementTag)
-        // localStorage.setItem('elementID', this.elementId)
-        // localStorage.setItem('elementHTML', this.html)
-        // console.log(localStorage)
-    },
-
     removerElement: function(){
         $('div').on('contextmenu', function(e){
             e.preventDefault(); 
@@ -55,27 +46,7 @@ let blockFunc = {
         })
 
         },
-
-        // onLongPress: function(element, callback) {
-        //     let timer;
-          
-        //     element.addEventListener('touchstart', () => { 
-        //       timer = setTimeout(() => {
-        //         timer = null;
-        //         callback();
-        //       }, 500);
-        //     });
-          
-        //     function cancel() {
-        //       clearTimeout(timer);
-        //     }
-          
-        //     element.addEventListener('touchend', cancel);
-        //     element.addEventListener('touchmove', cancel);
-        //   }
     }
-
-    // mobile functions
 
     function tClass(){
         $('.taskBlock').on('click', function() {
@@ -106,8 +77,7 @@ function(e){
     })
     
 })
-// blockFunc.storeData();
-// localStorage.removeItem()
+
 
 
 
