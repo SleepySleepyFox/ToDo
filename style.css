@@ -1,0 +1,156 @@
+html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    height: 100%;
+    background-color: #F3F1F5;
+    padding: 0%;
+    margin: 0%;
+}
+
+h1{
+    color: #BFA2DB;
+    font-family: monospace;
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+
+}
+
+input{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 2em;
+    height: 2em;
+    border-radius: 20em;
+    border: none;
+    width: 50%;
+    margin-bottom: 10%;
+
+}
+
+h3{
+    text-align: center;
+    color: #3f3f3f;
+    /* width: 0.5em; */
+}
+
+.taskBlock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    border: solid #BFA2DB;
+    border-width: 0.07em;
+    opacity: 0.8;
+    position: relative;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    margin: 3%;
+    overflow-x: hidden;
+    overflow-y: none;
+    transition: ease-in-out 0.3s;  
+}
+
+.removeTask{
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    right: 10px;
+    opacity: 0.5;
+}
+.remove_block{
+    background-color: rgb(253, 180, 180);
+    opacity: 0;
+    height: 100%;
+    width: 1.5%;
+    position: relative;
+    right: 0;
+    z-index: 3;
+}
+.remove_block:hover{
+    transition: ease-in 0.2s;
+    width: 0%;
+    opacity: 0.5;
+}
+.remove_block:hover:after{
+    content: "";
+    transition: ease-out 0.5s;
+    width: 0%;
+    opacity: 0;
+}
+
+.removeTask:hover{background-color: black;}
+
+@media only screen and (min-width:768px) {
+    .taskBlock{
+        margin: 1%; 
+    } 
+}
+@media only screen and (min-width:1024px) {
+    .taskBlock{
+        margin: 0.5%;
+        height: 8%;
+
+    } 
+}
+
+
+#taskBlock:hover{
+     transition: ease-in-out 0.3s;
+     width: 83%;
+}
+
+/* Animation */
+
+@keyframes append-animate {
+	from {
+	
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.new-box {
+	animation: append-animate .3s linear;
+}
+
+@keyframes remove-animate {
+	from {
+	
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+.remove.box{
+    animation: remove-animate 1s linear;
+}
+
+
+/* States */
+
+@keyframes getsDeleted-animate {
+	from {      
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+.getsDeleted{
+    background-color: rgba(255, 97, 97, 0.397);
+    animation: getsDeleted-animate 1s linear;
+}
+
+.done{
+    background-color: green;
+    opacity: 0.5;
+}
